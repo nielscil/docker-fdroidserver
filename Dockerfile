@@ -30,6 +30,7 @@ RUN apk add --update --no-cache \
 	openjdk11 \
 	py3-pip \
 	python3-dev \
+        rsync \
 	zlib-dev
 
 # Install latest packages from the pypi.org.
