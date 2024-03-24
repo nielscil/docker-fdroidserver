@@ -32,9 +32,9 @@ RUN apk add --update --no-cache \
 	python3-dev \
         rsync \
 	zlib-dev \
- 	qt5-qtbase-dev
+ 	py3-qt5
 
-RUN pip install pyqt5 --config-settings --confirm-license= --verbose --break-system-packages
+#RUN pip install pyqt5 --config-settings --confirm-license= --verbose --break-system-packages
 # Install latest packages from the pypi.org.
 RUN pip install -U \
 	fdroidserver \
