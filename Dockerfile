@@ -38,7 +38,8 @@ RUN apk add --update --no-cache \
 RUN pip install -U \
 	fdroidserver \
 	sdkmanager \
-	"androguard==4.1.1"
+	"androguard==4.1.1" \
+ 	--break-system-packages
 	
 # Install build-tools using sdkmanager.
 RUN sdkmanager "build-tools;$BUILD_TOOLS_VERSION"
