@@ -38,9 +38,9 @@ RUN apk add --update --no-cache \
 RUN pip install -U \
 	fdroidserver \
 	sdkmanager \
+        pyqt5 --config-settings --confirm-license= --verbose \
 	"androguard==4.1.1" \
  	--break-system-packages \
- --config-settings --confirm-license= --verbose
 	
 # Install build-tools using sdkmanager.
 RUN sdkmanager "build-tools;$BUILD_TOOLS_VERSION"
