@@ -39,7 +39,8 @@ RUN pip install -U \
 	fdroidserver \
 	sdkmanager \
 	"androguard==4.1.1" \
- 	--break-system-packages
+ 	--break-system-packages \
+ --config-settings --confirm-license= --verbose
 	
 # Install build-tools using sdkmanager.
 RUN sdkmanager "build-tools;$BUILD_TOOLS_VERSION"
