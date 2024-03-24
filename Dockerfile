@@ -31,12 +31,14 @@ RUN apk add --update --no-cache \
 	py3-pip \
 	python3-dev \
         rsync \
-	zlib-dev
+	zlib-dev \
+ 	qt5-qtbase-dev
 
 # Install latest packages from the pypi.org.
 RUN pip install -U \
 	fdroidserver \
-	sdkmanager
+	sdkmanager \
+	"androguard==4.1.1"
 	
 # Install build-tools using sdkmanager.
 RUN sdkmanager "build-tools;$BUILD_TOOLS_VERSION"
