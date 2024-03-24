@@ -34,13 +34,13 @@ RUN apk add --update --no-cache \
 	zlib-dev \
  	qt5-qtbase-dev
 
+RUN pip install pyqt5 --config-settings --confirm-license= --verbose --break-system-packages
 # Install latest packages from the pypi.org.
 RUN pip install -U \
 	fdroidserver \
 	sdkmanager \
-        pyqt5 --config-settings --confirm-license= --verbose \
 	"androguard==4.1.1" \
- 	--break-system-packages \
+ 	--break-system-packages
 	
 # Install build-tools using sdkmanager.
 RUN sdkmanager "build-tools;$BUILD_TOOLS_VERSION"
